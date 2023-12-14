@@ -396,7 +396,8 @@ class TURBD():
                     timestamp2 = re.findall(self.TIMESTAMP_PATTERN2, line)
                     # Get the data
                     turb_data = line.split()[-1]
-                    parsed_data = timestamp1.extend(turb_data)
+                    timestamp1.append(timestamp2[0])
+                    timestamp1.append(turb_data)
 
                 except:
                     # Check that there are two parseable timestamps
@@ -407,7 +408,7 @@ class TURBD():
 
                 # Append the parsed data to the good_data data frame
                 if line is not None:
-                    good_data.append(parsed_data)
+                    good_data.append(timestamp1)
 
         return good_data
 
