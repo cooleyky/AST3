@@ -348,6 +348,7 @@ dependencies:
   - zstandard=0.22.0
   - zstd=1.5.5
   - openpyxl
+  - scikit-learn
   - pip:
       - https://bitbucket.org/ooicgsn/pyseas/get/develop.zip
       - https://bitbucket.org/ooicgsn/cgsn-processing/get/master.zip
